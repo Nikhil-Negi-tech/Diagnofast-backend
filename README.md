@@ -77,7 +77,7 @@ DIAGNOFAST/
    
    Create a `.env` file in the `server` directory:
    ```env
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/diagnofast?retryWrites=true&w=majority
+   MONGODB_URI=your_mongodb_url
    JWT_SECRET=your-super-secret-jwt-key-here
    PORT=5000
    NODE_ENV=development
