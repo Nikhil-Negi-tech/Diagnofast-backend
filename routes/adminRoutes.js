@@ -329,6 +329,48 @@ router.post('/medicines', authenticateToken, async (req, res) => {
   }
 });
 
+// Delete specific medicine from a disease
+router.delete('/medicines/:diseaseName/:medicineIndex', authenticateToken, async (req, res) => {
+  try {
+    const { diseaseName, medicineIndex } = req.params;
+    const index = parseInt(medicineIndex);
+
+    // Find the medicine record
+    const medicineRecord = await Medicine.findOne({ disease: diseaseName });
+    if (!medicineRecord) {
+      return res.status(404).json({
+        success: false,
+        message: 'Medicine record not found for this disease'
+      });
+    }
+
+    // Validate index
+    if (index < 0 || index >= medicineRecord.medicines.length) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid medicine index'
+      });
+    }
+
+    // Remove the medicine at the specified index
+    medicineRecord.medicines.splice(index, 1);
+    await medicineRecord.save();
+
+    res.json({
+      success: true,
+      medicines: medicineRecord,
+      message: 'Medicine deleted successfully'
+    });
+
+  } catch (error) {
+    console.error('Error deleting medicine:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to delete medicine'
+    });
+  }
+});
+
 // Get dashboard statistics
 router.get('/stats', authenticateToken, async (req, res) => {
   try {
