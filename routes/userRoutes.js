@@ -4,6 +4,20 @@ const Medicine = require('../models/Medicine');
 
 const router = express.Router();
 
+// Base route for API status
+router.get('/', (req, res) => {
+  res.json({
+    message: 'DIAGNOFAST User API',
+    version: '1.0.0',
+    status: 'OK',
+    availableEndpoints: [
+      'GET /api/symptoms - Get all symptoms',
+      'POST /api/diagnose - Get diagnosis for symptoms',
+      'GET /api/disease/:id - Get disease details'
+    ]
+  });
+});
+
 // Get all available symptoms
 router.get('/symptoms', async (req, res) => {
   try {
