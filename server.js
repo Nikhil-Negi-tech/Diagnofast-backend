@@ -26,6 +26,17 @@ app.get('/', (req, res) => {
   res.json({ message: 'DIAGNOFAST API is running!' });
 });
 
+// API Health check route for uptime monitoring
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'healthy',
+    message: 'DIAGNOFAST API is running!',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
