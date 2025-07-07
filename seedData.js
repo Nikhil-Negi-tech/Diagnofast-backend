@@ -11,64 +11,64 @@ const sampleDiseases = [
   // Respiratory Diseases
   {
     name: 'Common Cold',
-    symptoms: ['runny nose', 'sneezing', 'sore throat', 'cough', 'mild fever'],
+    symptoms: ['runny nose', 'sneezing', 'sore throat', 'mild cough', 'low-grade fever', 'nasal congestion'],
     description: 'A viral infection of the upper respiratory tract that is very common and usually harmless.'
   },
   {
     name: 'Influenza (Flu)',
-    symptoms: ['high fever', 'body aches', 'fatigue', 'headache', 'dry cough', 'chills'],
+    symptoms: ['high fever', 'body aches', 'severe fatigue', 'headache', 'dry cough', 'chills', 'sore throat'],
     description: 'A viral infection that attacks the respiratory system and can cause severe complications.'
   },
   {
     name: 'Pneumonia',
-    symptoms: ['persistent cough', 'fever', 'chest pain', 'difficulty breathing', 'fatigue'],
+    symptoms: ['persistent cough with phlegm', 'fever', 'chest pain when breathing', 'difficulty breathing', 'fatigue', 'chills'],
     description: 'An infection that inflames air sacs in one or both lungs, which may fill with fluid.'
   },
   {
     name: 'Asthma',
-    symptoms: ['wheezing', 'shortness of breath', 'chest tightness', 'coughing'],
+    symptoms: ['wheezing', 'shortness of breath', 'chest tightness', 'persistent cough', 'difficulty sleeping due to breathing'],
     description: 'A condition in which airways narrow and swell, making breathing difficult.'
   },
   {
     name: 'Bronchitis',
-    symptoms: ['persistent cough', 'mucus production', 'fatigue', 'shortness of breath', 'chest discomfort'],
+    symptoms: ['persistent cough with mucus', 'fatigue', 'shortness of breath', 'chest discomfort', 'low-grade fever'],
     description: 'Inflammation of the bronchial tubes that carry air to the lungs.'
   },
   {
     name: 'Tuberculosis',
-    symptoms: ['persistent cough', 'blood in sputum', 'weight loss', 'night sweats', 'fever'],
+    symptoms: ['persistent cough lasting weeks', 'coughing up blood', 'weight loss', 'night sweats', 'fever', 'loss of appetite'],
     description: 'A serious bacterial infection that mainly affects the lungs.'
   },
   {
     name: 'Whooping Cough',
-    symptoms: ['violent coughing fits', 'whooping sound', 'vomiting after coughing', 'exhaustion'],
+    symptoms: ['violent coughing fits', 'whooping sound when breathing', 'vomiting after coughing', 'exhaustion', 'runny nose'],
     description: 'A highly contagious bacterial infection affecting the respiratory system.'
   },
   {
     name: 'Sinusitis',
-    symptoms: ['facial pain', 'nasal congestion', 'thick nasal discharge', 'headache', 'reduced smell'],
+    symptoms: ['facial pain and pressure', 'nasal congestion', 'thick yellow or green nasal discharge', 'headache', 'reduced sense of smell'],
     description: 'Inflammation of the sinuses causing congestion and facial pain.'
   },
 
   // Cardiovascular Diseases
   {
     name: 'Hypertension',
-    symptoms: ['headache', 'dizziness', 'blurred vision', 'chest pain', 'shortness of breath'],
+    symptoms: ['often no symptoms', 'headache', 'dizziness', 'blurred vision', 'shortness of breath'],
     description: 'High blood pressure that increases the risk of heart disease and stroke.'
   },
   {
     name: 'Heart Attack',
-    symptoms: ['chest pain', 'shortness of breath', 'nausea', 'sweating', 'arm pain'],
+    symptoms: ['severe chest pain', 'pain radiating to arm or jaw', 'shortness of breath', 'nausea', 'sweating', 'lightheadedness'],
     description: 'A blockage of blood flow to the heart muscle.'
   },
   {
     name: 'Angina',
-    symptoms: ['chest pain', 'pressure in chest', 'shortness of breath', 'fatigue', 'dizziness'],
+    symptoms: ['chest pain or discomfort', 'pressure in chest', 'shortness of breath', 'fatigue', 'pain in shoulders or arms'],
     description: 'Chest pain caused by reduced blood flow to the heart muscles.'
   },
   {
     name: 'Arrhythmia',
-    symptoms: ['irregular heartbeat', 'palpitations', 'dizziness', 'chest pain', 'shortness of breath'],
+    symptoms: ['irregular heartbeat', 'heart palpitations', 'dizziness', 'chest pain', 'shortness of breath', 'fainting'],
     description: 'Abnormal heart rhythm that can be too fast, too slow, or irregular.'
   },
 
@@ -524,8 +524,270 @@ const sampleDiseases = [
   },
   {
     name: 'Pulmonary Embolism',
-    symptoms: ['shortness of breath', 'chest pain', 'cough', 'rapid heart rate', 'sweating'],
-    description: 'A blockage in one of the pulmonary arteries in lungs.'
+    symptoms: ['sudden shortness of breath', 'chest pain', 'rapid heart rate', 'coughing up blood', 'dizziness'],
+    description: 'A blockage in one of the pulmonary arteries in the lungs, usually caused by blood clots.'
+  },
+
+  // Additional 50 New Diseases
+  {
+    name: 'Crohn\'s Disease',
+    symptoms: ['chronic diarrhea', 'abdominal pain', 'weight loss', 'rectal bleeding', 'fever'],
+    description: 'A chronic inflammatory bowel disease affecting the digestive tract.'
+  },
+  {
+    name: 'Ulcerative Colitis',
+    symptoms: ['bloody diarrhea', 'abdominal cramping', 'urgency to defecate', 'fatigue', 'weight loss'],
+    description: 'A chronic inflammatory disease of the large intestine and rectum.'
+  },
+  {
+    name: 'Peptic Ulcer Disease',
+    symptoms: ['burning stomach pain', 'bloating', 'heartburn', 'nausea', 'dark stools'],
+    description: 'Open sores that develop on the inner lining of the stomach or upper small intestine.'
+  },
+  {
+    name: 'Gastroesophageal Reflux Disease',
+    symptoms: ['heartburn', 'acid regurgitation', 'difficulty swallowing', 'chest pain', 'chronic cough'],
+    description: 'A chronic condition where stomach acid frequently flows back into the esophagus.'
+  },
+  {
+    name: 'Chronic Pancreatitis',
+    symptoms: ['persistent abdominal pain', 'nausea', 'vomiting', 'weight loss', 'oily stools'],
+    description: 'Long-term inflammation of the pancreas that progressively worsens over time.'
+  },
+  {
+    name: 'Cirrhosis',
+    symptoms: ['fatigue', 'jaundice', 'abdominal swelling', 'confusion', 'easy bruising'],
+    description: 'Severe scarring of the liver and poor liver function due to chronic liver disease.'
+  },
+  {
+    name: 'Coronary Artery Disease',
+    symptoms: ['chest pain', 'shortness of breath', 'fatigue', 'irregular heartbeat', 'weakness'],
+    description: 'The most common type of heart disease caused by narrowed or blocked coronary arteries.'
+  },
+  {
+    name: 'Peripheral Artery Disease',
+    symptoms: ['leg pain when walking', 'leg numbness', 'coldness in legs', 'leg weakness', 'slow wound healing'],
+    description: 'A circulatory condition where narrowed arteries reduce blood flow to the limbs.'
+  },
+  {
+    name: 'Aortic Aneurysm',
+    symptoms: ['deep abdominal pain', 'back pain', 'pulsating feeling in abdomen', 'nausea', 'vomiting'],
+    description: 'An enlarged area in the aorta, the body\'s main artery, that can be life-threatening.'
+  },
+  {
+    name: 'Mitral Valve Prolapse',
+    symptoms: ['heart palpitations', 'chest pain', 'fatigue', 'dizziness', 'shortness of breath'],
+    description: 'A condition where the valve between the left chambers of the heart doesn\'t close properly.'
+  },
+  {
+    name: 'Acute Bronchiolitis',
+    symptoms: ['wheezing', 'rapid breathing', 'cough', 'fever', 'difficulty feeding'],
+    description: 'A viral infection causing inflammation and congestion in the small airways of the lungs.'
+  },
+  {
+    name: 'Emphysema',
+    symptoms: ['shortness of breath', 'chronic cough', 'wheezing', 'fatigue', 'weight loss'],
+    description: 'A lung condition causing shortness of breath due to damaged air sacs in the lungs.'
+  },
+  {
+    name: 'Pulmonary Fibrosis',
+    symptoms: ['dry cough', 'shortness of breath', 'fatigue', 'unexplained weight loss', 'muscle aches'],
+    description: 'A lung disease that occurs when lung tissue becomes damaged and scarred.'
+  },
+  {
+    name: 'Sarcoidosis',
+    symptoms: ['persistent cough', 'shortness of breath', 'skin rashes', 'swollen lymph nodes', 'fatigue'],
+    description: 'An inflammatory disease affecting multiple organs, most commonly the lungs and lymph glands.'
+  },
+  {
+    name: 'Chronic Sinusitis',
+    symptoms: ['nasal congestion', 'facial pressure', 'reduced sense of smell', 'thick nasal discharge', 'ear fullness'],
+    description: 'A common condition where the cavities around nasal passages become inflamed for 12 weeks or longer.'
+  },
+  {
+    name: 'Addison\'s Disease',
+    symptoms: ['extreme fatigue', 'weight loss', 'low blood pressure', 'darkening of skin', 'salt cravings'],
+    description: 'A rare disorder where the adrenal glands don\'t produce enough hormones.'
+  },
+  {
+    name: 'Cushing\'s Syndrome',
+    symptoms: ['weight gain', 'purple stretch marks', 'high blood pressure', 'muscle weakness', 'mood changes'],
+    description: 'A hormonal disorder caused by prolonged exposure to high levels of cortisol.'
+  },
+  {
+    name: 'Polycystic Kidney Disease',
+    symptoms: ['high blood pressure', 'back pain', 'kidney stones', 'urinary tract infections', 'blood in urine'],
+    description: 'An inherited disorder causing numerous cysts to grow in the kidneys.'
+  },
+  {
+    name: 'Acute Glomerulonephritis',
+    symptoms: ['blood in urine', 'foamy urine', 'swelling', 'high blood pressure', 'fatigue'],
+    description: 'Inflammation of the tiny filters in the kidneys that can lead to kidney damage.'
+  },
+  {
+    name: 'Nephrotic Syndrome',
+    symptoms: ['severe swelling', 'foamy urine', 'weight gain', 'fatigue', 'loss of appetite'],
+    description: 'A kidney disorder causing the body to excrete too much protein in the urine.'
+  },
+  {
+    name: 'Huntington\'s Disease',
+    symptoms: ['involuntary movements', 'cognitive decline', 'emotional problems', 'difficulty swallowing', 'balance problems'],
+    description: 'An inherited condition causing progressive breakdown of nerve cells in the brain.'
+  },
+  {
+    name: 'Amyotrophic Lateral Sclerosis',
+    symptoms: ['muscle weakness', 'difficulty speaking', 'trouble swallowing', 'muscle cramps', 'twitching'],
+    description: 'A progressive nervous system disease affecting nerve cells in the brain and spinal cord.'
+  },
+  {
+    name: 'Myasthenia Gravis',
+    symptoms: ['muscle weakness', 'drooping eyelids', 'double vision', 'difficulty speaking', 'difficulty swallowing'],
+    description: 'A chronic autoimmune disorder affecting communication between nerves and muscles.'
+  },
+  {
+    name: 'Guillain-Barré Syndrome',
+    symptoms: ['muscle weakness', 'tingling sensations', 'pain', 'difficulty walking', 'breathing difficulties'],
+    description: 'A rare disorder where the immune system attacks the peripheral nervous system.'
+  },
+  {
+    name: 'Trigeminal Neuralgia',
+    symptoms: ['severe facial pain', 'shooting pain', 'touching face triggers pain', 'jaw pain', 'tooth pain'],
+    description: 'A chronic pain condition affecting the trigeminal nerve in the face.'
+  },
+  {
+    name: 'Meniere\'s Disease',
+    symptoms: ['vertigo', 'hearing loss', 'tinnitus', 'ear fullness', 'nausea'],
+    description: 'An inner ear disorder that can affect hearing and balance.'
+  },
+  {
+    name: 'Labyrinthitis',
+    symptoms: ['dizziness', 'hearing loss', 'ear pain', 'nausea', 'balance problems'],
+    description: 'Inflammation of the inner ear that can cause dizziness and hearing problems.'
+  },
+  {
+    name: 'Acoustic Neuroma',
+    symptoms: ['hearing loss', 'tinnitus', 'balance problems', 'facial numbness', 'headaches'],
+    description: 'A noncancerous tumor that develops on the nerve that connects the ear to the brain.'
+  },
+  {
+    name: 'Macular Degeneration',
+    symptoms: ['blurred vision', 'dark spots in vision', 'difficulty recognizing faces', 'straight lines appear wavy', 'need for brighter light'],
+    description: 'An eye disease that can blur the sharp, central vision needed for activities like reading.'
+  },
+  {
+    name: 'Diabetic Retinopathy',
+    symptoms: ['blurred vision', 'floaters', 'dark areas in vision', 'difficulty seeing colors', 'vision loss'],
+    description: 'A diabetes complication that affects eyes caused by damage to blood vessels in the retina.'
+  },
+  {
+    name: 'Retinal Detachment',
+    symptoms: ['sudden flashes of light', 'floaters', 'shadow in peripheral vision', 'curtain effect over vision', 'sudden vision loss'],
+    description: 'A serious eye condition where the retina pulls away from the tissue underneath it.'
+  },
+  {
+    name: 'Keratoconus',
+    symptoms: ['blurred vision', 'distorted vision', 'increased light sensitivity', 'glare', 'frequent prescription changes'],
+    description: 'An eye condition where the cornea thins and gradually bulges outward into a cone shape.'
+  },
+  {
+    name: 'Dry Eye Syndrome',
+    symptoms: ['burning eyes', 'gritty feeling', 'excessive tearing', 'blurred vision', 'eye fatigue'],
+    description: 'A common condition that occurs when tears aren\'t able to provide adequate lubrication for eyes.'
+  },
+  {
+    name: 'Hidradenitis Suppurativa',
+    symptoms: ['painful lumps under skin', 'blackheads', 'tunnels under skin', 'scarring', 'foul-smelling discharge'],
+    description: 'A chronic skin condition featuring lumps in places such as the armpits or groin.'
+  },
+  {
+    name: 'Vitiligo',
+    symptoms: ['white patches on skin', 'premature graying of hair', 'loss of color inside mouth', 'loss of color in retina', 'patches spreading'],
+    description: 'A condition causing patches of skin to lose their pigmentation.'
+  },
+  {
+    name: 'Pemphigus',
+    symptoms: ['blisters on skin', 'blisters in mouth', 'painful sores', 'crusting', 'skin peeling'],
+    description: 'A group of rare autoimmune diseases that cause blistering of the skin and mucous membranes.'
+  },
+  {
+    name: 'Bullous Pemphigoid',
+    symptoms: ['large blisters', 'itchy rash', 'red patches', 'hives', 'blisters that don\'t break easily'],
+    description: 'An autoimmune disorder causing large, fluid-filled blisters on areas of skin that often flex.'
+  },
+  {
+    name: 'Systemic Lupus Erythematosus',
+    symptoms: ['butterfly rash', 'joint pain', 'fatigue', 'fever', 'hair loss'],
+    description: 'An autoimmune disease where the immune system attacks its own tissues.'
+  },
+  {
+    name: 'Sjögren\'s Syndrome',
+    symptoms: ['dry eyes', 'dry mouth', 'joint pain', 'fatigue', 'skin rashes'],
+    description: 'An autoimmune disorder that primarily affects the glands that produce tears and saliva.'
+  },
+  {
+    name: 'Scleroderma',
+    symptoms: ['hardening of skin', 'Raynaud\'s phenomenon', 'heartburn', 'difficulty swallowing', 'shortness of breath'],
+    description: 'A group of autoimmune diseases that may result in changes to the skin, blood vessels, muscles, and internal organs.'
+  },
+  {
+    name: 'Polymyositis',
+    symptoms: ['muscle weakness', 'muscle pain', 'difficulty swallowing', 'fatigue', 'fever'],
+    description: 'An inflammatory muscle disease causing weakness and inflammation of the skeletal muscles.'
+  },
+  {
+    name: 'Dermatomyositis',
+    symptoms: ['muscle weakness', 'distinctive skin rash', 'difficulty swallowing', 'lung problems', 'calcium deposits'],
+    description: 'An inflammatory disease marked by muscle weakness and a distinctive skin rash.'
+  },
+  {
+    name: 'Giant Cell Arteritis',
+    symptoms: ['severe headaches', 'jaw pain when chewing', 'vision problems', 'scalp tenderness', 'fever'],
+    description: 'Inflammation of the lining of the arteries, most commonly affecting those in the head.'
+  },
+  {
+    name: 'Polymyalgia Rheumatica',
+    symptoms: ['muscle aches', 'stiffness in shoulders', 'stiffness in hips', 'fatigue', 'mild fever'],
+    description: 'An inflammatory disorder causing muscle pain and stiffness around the shoulders and hips.'
+  },
+  {
+    name: 'Takayasu Arteritis',
+    symptoms: ['fatigue', 'weight loss', 'muscle aches', 'high blood pressure', 'weak pulse'],
+    description: 'A rare type of vasculitis that causes inflammation of the aorta and its main branches.'
+  },
+  {
+    name: 'Behcet\'s Disease',
+    symptoms: ['mouth sores', 'genital sores', 'eye inflammation', 'skin lesions', 'joint pain'],
+    description: 'A rare disorder that causes blood vessel inflammation throughout the body.'
+  },
+  {
+    name: 'Kawasaki Disease',
+    symptoms: ['high fever', 'rash', 'swollen lymph nodes', 'red eyes', 'swollen hands and feet'],
+    description: 'An illness that causes inflammation in the walls of medium-sized arteries throughout the body.'
+  },
+  {
+    name: 'Marfan Syndrome',
+    symptoms: ['tall stature', 'long limbs', 'flexible joints', 'heart murmur', 'vision problems'],
+    description: 'A genetic disorder that affects the connective tissue throughout the body.'
+  },
+  {
+    name: 'Ehlers-Danlos Syndrome',
+    symptoms: ['stretchy skin', 'loose joints', 'fragile skin', 'easy bruising', 'chronic pain'],
+    description: 'A group of disorders that affect connective tissues supporting the skin, bones, blood vessels, and other organs.'
+  },
+  {
+    name: 'Osteogenesis Imperfecta',
+    symptoms: ['frequent bone fractures', 'short stature', 'triangular face', 'hearing loss', 'blue sclerae'],
+    description: 'A genetic disorder characterized by bones that break easily with little or no obvious cause.'
+  },
+  {
+    name: 'Hemophilia',
+    symptoms: ['excessive bleeding', 'easy bruising', 'bleeding into joints', 'blood in urine', 'nosebleeds'],
+    description: 'A rare disorder where blood doesn\'t clot normally due to lack of blood-clotting proteins.'
+  },
+  {
+    name: 'Von Willebrand Disease',
+    symptoms: ['easy bruising', 'frequent nosebleeds', 'heavy menstrual periods', 'excessive bleeding after surgery', 'bleeding gums'],
+    description: 'The most common inherited bleeding disorder caused by deficiency in von Willebrand factor.'
   }
 ];
 
@@ -1347,6 +1609,424 @@ const sampleMedicines = [
       { name: 'Heparin', type: 'Injection', dosage: '80 units/kg' },
       { name: 'Warfarin', type: 'Tablet', dosage: '5mg' },
       { name: 'Alteplase', type: 'Injection', dosage: '100mg' }
+    ]
+  },
+
+  // New Disease Medicines - 50 Additional Medicines
+  {
+    disease: 'Crohn\'s Disease',
+    medicines: [
+      { name: 'Mesalazine', type: 'Tablet', dosage: '500mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '40mg' },
+      { name: 'Azathioprine', type: 'Tablet', dosage: '50mg' }
+    ]
+  },
+  {
+    disease: 'Ulcerative Colitis',
+    medicines: [
+      { name: 'Sulfasalazine', type: 'Tablet', dosage: '500mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '40mg' },
+      { name: 'Mesalazine', type: 'Suspension', dosage: '1g' }
+    ]
+  },
+  {
+    disease: 'Peptic Ulcer Disease',
+    medicines: [
+      { name: 'Omeprazole', type: 'Capsule', dosage: '20mg' },
+      { name: 'Amoxicillin', type: 'Capsule', dosage: '1g' },
+      { name: 'Clarithromycin', type: 'Tablet', dosage: '500mg' }
+    ]
+  },
+  {
+    disease: 'Gastroesophageal Reflux Disease',
+    medicines: [
+      { name: 'Omeprazole', type: 'Capsule', dosage: '20mg' },
+      { name: 'Ranitidine', type: 'Tablet', dosage: '150mg' },
+      { name: 'Domperidone', type: 'Tablet', dosage: '10mg' }
+    ]
+  },
+  {
+    disease: 'Chronic Pancreatitis',
+    medicines: [
+      { name: 'Pancreatic enzymes', type: 'Capsule', dosage: 'As needed' },
+      { name: 'Tramadol', type: 'Tablet', dosage: '50mg' },
+      { name: 'Insulin', type: 'Injection', dosage: 'As prescribed' }
+    ]
+  },
+  {
+    disease: 'Cirrhosis',
+    medicines: [
+      { name: 'Lactulose', type: 'Syrup', dosage: '15ml' },
+      { name: 'Spironolactone', type: 'Tablet', dosage: '100mg' },
+      { name: 'Propranolol', type: 'Tablet', dosage: '40mg' }
+    ]
+  },
+  {
+    disease: 'Coronary Artery Disease',
+    medicines: [
+      { name: 'Atorvastatin', type: 'Tablet', dosage: '20mg' },
+      { name: 'Aspirin', type: 'Tablet', dosage: '75mg' },
+      { name: 'Metoprolol', type: 'Tablet', dosage: '50mg' }
+    ]
+  },
+  {
+    disease: 'Peripheral Artery Disease',
+    medicines: [
+      { name: 'Cilostazol', type: 'Tablet', dosage: '100mg' },
+      { name: 'Clopidogrel', type: 'Tablet', dosage: '75mg' },
+      { name: 'Atorvastatin', type: 'Tablet', dosage: '40mg' }
+    ]
+  },
+  {
+    disease: 'Aortic Aneurysm',
+    medicines: [
+      { name: 'Metoprolol', type: 'Tablet', dosage: '100mg' },
+      { name: 'Lisinopril', type: 'Tablet', dosage: '10mg' },
+      { name: 'Atorvastatin', type: 'Tablet', dosage: '20mg' }
+    ]
+  },
+  {
+    disease: 'Mitral Valve Prolapse',
+    medicines: [
+      { name: 'Metoprolol', type: 'Tablet', dosage: '25mg' },
+      { name: 'Atenolol', type: 'Tablet', dosage: '25mg' },
+      { name: 'Aspirin', type: 'Tablet', dosage: '75mg' }
+    ]
+  },
+  {
+    disease: 'Acute Bronchiolitis',
+    medicines: [
+      { name: 'Salbutamol', type: 'Inhaler', dosage: '2.5mg' },
+      { name: 'Paracetamol', type: 'Syrup', dosage: '120mg' },
+      { name: 'Saline drops', type: 'Drops', dosage: 'As needed' }
+    ]
+  },
+  {
+    disease: 'Emphysema',
+    medicines: [
+      { name: 'Tiotropium', type: 'Inhaler', dosage: '18mcg' },
+      { name: 'Salbutamol', type: 'Inhaler', dosage: '100mcg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '30mg' }
+    ]
+  },
+  {
+    disease: 'Pulmonary Fibrosis',
+    medicines: [
+      { name: 'Pirfenidone', type: 'Capsule', dosage: '267mg' },
+      { name: 'Nintedanib', type: 'Capsule', dosage: '150mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '20mg' }
+    ]
+  },
+  {
+    disease: 'Sarcoidosis',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '40mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '15mg' },
+      { name: 'Hydroxychloroquine', type: 'Tablet', dosage: '200mg' }
+    ]
+  },
+  {
+    disease: 'Chronic Sinusitis',
+    medicines: [
+      { name: 'Fluticasone', type: 'Spray', dosage: '50mcg' },
+      { name: 'Amoxicillin-clavulanate', type: 'Tablet', dosage: '625mg' },
+      { name: 'Saline rinse', type: 'Drops', dosage: 'As needed' }
+    ]
+  },
+  {
+    disease: 'Addison\'s Disease',
+    medicines: [
+      { name: 'Hydrocortisone', type: 'Tablet', dosage: '20mg' },
+      { name: 'Fludrocortisone', type: 'Tablet', dosage: '0.1mg' },
+      { name: 'Dexamethasone', type: 'Injection', dosage: 'Emergency use' }
+    ]
+  },
+  {
+    disease: 'Cushing\'s Syndrome',
+    medicines: [
+      { name: 'Ketoconazole', type: 'Tablet', dosage: '200mg' },
+      { name: 'Metyrapone', type: 'Capsule', dosage: '250mg' },
+      { name: 'Mifepristone', type: 'Tablet', dosage: '300mg' }
+    ]
+  },
+  {
+    disease: 'Polycystic Kidney Disease',
+    medicines: [
+      { name: 'Tolvaptan', type: 'Tablet', dosage: '15mg' },
+      { name: 'Lisinopril', type: 'Tablet', dosage: '10mg' },
+      { name: 'Furosemide', type: 'Tablet', dosage: '40mg' }
+    ]
+  },
+  {
+    disease: 'Acute Glomerulonephritis',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Cyclophosphamide', type: 'Injection', dosage: 'As prescribed' },
+      { name: 'Furosemide', type: 'Tablet', dosage: '40mg' }
+    ]
+  },
+  {
+    disease: 'Nephrotic Syndrome',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Cyclophosphamide', type: 'Tablet', dosage: '50mg' },
+      { name: 'Lisinopril', type: 'Tablet', dosage: '10mg' }
+    ]
+  },
+  {
+    disease: 'Huntington\'s Disease',
+    medicines: [
+      { name: 'Tetrabenazine', type: 'Tablet', dosage: '25mg' },
+      { name: 'Haloperidol', type: 'Tablet', dosage: '5mg' },
+      { name: 'Deutetrabenazine', type: 'Tablet', dosage: '6mg' }
+    ]
+  },
+  {
+    disease: 'Amyotrophic Lateral Sclerosis',
+    medicines: [
+      { name: 'Riluzole', type: 'Tablet', dosage: '50mg' },
+      { name: 'Edaravone', type: 'Injection', dosage: '60mg' },
+      { name: 'Baclofen', type: 'Tablet', dosage: '10mg' }
+    ]
+  },
+  {
+    disease: 'Myasthenia Gravis',
+    medicines: [
+      { name: 'Pyridostigmine', type: 'Tablet', dosage: '60mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Azathioprine', type: 'Tablet', dosage: '50mg' }
+    ]
+  },
+  {
+    disease: 'Guillain-Barré Syndrome',
+    medicines: [
+      { name: 'Immunoglobulin', type: 'Injection', dosage: 'As prescribed' },
+      { name: 'Gabapentin', type: 'Capsule', dosage: '300mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' }
+    ]
+  },
+  {
+    disease: 'Trigeminal Neuralgia',
+    medicines: [
+      { name: 'Carbamazepine', type: 'Tablet', dosage: '200mg' },
+      { name: 'Gabapentin', type: 'Capsule', dosage: '300mg' },
+      { name: 'Baclofen', type: 'Tablet', dosage: '10mg' }
+    ]
+  },
+  {
+    disease: 'Meniere\'s Disease',
+    medicines: [
+      { name: 'Betahistine', type: 'Tablet', dosage: '16mg' },
+      { name: 'Prochlorperazine', type: 'Tablet', dosage: '5mg' },
+      { name: 'Hydrochlorothiazide', type: 'Tablet', dosage: '25mg' }
+    ]
+  },
+  {
+    disease: 'Labyrinthitis',
+    medicines: [
+      { name: 'Prochlorperazine', type: 'Tablet', dosage: '5mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Cyclizine', type: 'Tablet', dosage: '50mg' }
+    ]
+  },
+  {
+    disease: 'Acoustic Neuroma',
+    medicines: [
+      { name: 'Dexamethasone', type: 'Injection', dosage: '4mg' },
+      { name: 'Diazepam', type: 'Tablet', dosage: '5mg' },
+      { name: 'Meclizine', type: 'Tablet', dosage: '25mg' }
+    ]
+  },
+  {
+    disease: 'Macular Degeneration',
+    medicines: [
+      { name: 'Ranibizumab', type: 'Injection', dosage: '0.5mg' },
+      { name: 'Aflibercept', type: 'Injection', dosage: '2mg' },
+      { name: 'Vitamin supplements', type: 'Tablet', dosage: 'Daily' }
+    ]
+  },
+  {
+    disease: 'Diabetic Retinopathy',
+    medicines: [
+      { name: 'Ranibizumab', type: 'Injection', dosage: '0.3mg' },
+      { name: 'Bevacizumab', type: 'Injection', dosage: '1.25mg' },
+      { name: 'Triamcinolone', type: 'Injection', dosage: '4mg' }
+    ]
+  },
+  {
+    disease: 'Retinal Detachment',
+    medicines: [
+      { name: 'Prednisolone', type: 'Drops', dosage: '1%' },
+      { name: 'Cyclopentolate', type: 'Drops', dosage: '1%' },
+      { name: 'Pilocarpine', type: 'Drops', dosage: '2%' }
+    ]
+  },
+  {
+    disease: 'Keratoconus',
+    medicines: [
+      { name: 'Riboflavin', type: 'Drops', dosage: '0.1%' },
+      { name: 'Artificial tears', type: 'Drops', dosage: 'As needed' },
+      { name: 'Prednisolone', type: 'Drops', dosage: '1%' }
+    ]
+  },
+  {
+    disease: 'Dry Eye Syndrome',
+    medicines: [
+      { name: 'Artificial tears', type: 'Drops', dosage: 'As needed' },
+      { name: 'Cyclosporine', type: 'Drops', dosage: '0.05%' },
+      { name: 'Lifitegrast', type: 'Drops', dosage: '5%' }
+    ]
+  },
+  {
+    disease: 'Hidradenitis Suppurativa',
+    medicines: [
+      { name: 'Adalimumab', type: 'Injection', dosage: '40mg' },
+      { name: 'Clindamycin', type: 'Gel', dosage: '1%' },
+      { name: 'Doxycycline', type: 'Capsule', dosage: '100mg' }
+    ]
+  },
+  {
+    disease: 'Vitiligo',
+    medicines: [
+      { name: 'Tacrolimus', type: 'Ointment', dosage: '0.1%' },
+      { name: 'Clobetasol', type: 'Cream', dosage: '0.05%' },
+      { name: 'Betamethasone', type: 'Cream', dosage: '0.1%' }
+    ]
+  },
+  {
+    disease: 'Pemphigus',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '80mg' },
+      { name: 'Azathioprine', type: 'Tablet', dosage: '100mg' },
+      { name: 'Rituximab', type: 'Injection', dosage: 'As prescribed' }
+    ]
+  },
+  {
+    disease: 'Bullous Pemphigoid',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Doxycycline', type: 'Capsule', dosage: '100mg' },
+      { name: 'Clobetasol', type: 'Cream', dosage: '0.05%' }
+    ]
+  },
+  {
+    disease: 'Systemic Lupus Erythematosus',
+    medicines: [
+      { name: 'Hydroxychloroquine', type: 'Tablet', dosage: '200mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '40mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '15mg' }
+    ]
+  },
+  {
+    disease: 'Sjögren\'s Syndrome',
+    medicines: [
+      { name: 'Pilocarpine', type: 'Tablet', dosage: '5mg' },
+      { name: 'Hydroxychloroquine', type: 'Tablet', dosage: '200mg' },
+      { name: 'Artificial tears', type: 'Drops', dosage: 'As needed' }
+    ]
+  },
+  {
+    disease: 'Scleroderma',
+    medicines: [
+      { name: 'Methotrexate', type: 'Tablet', dosage: '15mg' },
+      { name: 'Nifedipine', type: 'Tablet', dosage: '10mg' },
+      { name: 'Omeprazole', type: 'Capsule', dosage: '20mg' }
+    ]
+  },
+  {
+    disease: 'Polymyositis',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '15mg' },
+      { name: 'Azathioprine', type: 'Tablet', dosage: '100mg' }
+    ]
+  },
+  {
+    disease: 'Dermatomyositis',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '15mg' },
+      { name: 'Hydroxychloroquine', type: 'Tablet', dosage: '200mg' }
+    ]
+  },
+  {
+    disease: 'Giant Cell Arteritis',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '15mg' },
+      { name: 'Aspirin', type: 'Tablet', dosage: '75mg' }
+    ]
+  },
+  {
+    disease: 'Polymyalgia Rheumatica',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '15mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '10mg' },
+      { name: 'Calcium supplements', type: 'Tablet', dosage: '500mg' }
+    ]
+  },
+  {
+    disease: 'Takayasu Arteritis',
+    medicines: [
+      { name: 'Prednisolone', type: 'Tablet', dosage: '60mg' },
+      { name: 'Methotrexate', type: 'Tablet', dosage: '20mg' },
+      { name: 'Tocilizumab', type: 'Injection', dosage: 'As prescribed' }
+    ]
+  },
+  {
+    disease: 'Behcet\'s Disease',
+    medicines: [
+      { name: 'Colchicine', type: 'Tablet', dosage: '0.5mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '40mg' },
+      { name: 'Azathioprine', type: 'Tablet', dosage: '100mg' }
+    ]
+  },
+  {
+    disease: 'Kawasaki Disease',
+    medicines: [
+      { name: 'Immunoglobulin', type: 'Injection', dosage: '2g/kg' },
+      { name: 'Aspirin', type: 'Tablet', dosage: '80mg' },
+      { name: 'Prednisolone', type: 'Tablet', dosage: '2mg/kg' }
+    ]
+  },
+  {
+    disease: 'Marfan Syndrome',
+    medicines: [
+      { name: 'Metoprolol', type: 'Tablet', dosage: '50mg' },
+      { name: 'Losartan', type: 'Tablet', dosage: '50mg' },
+      { name: 'Amlodipine', type: 'Tablet', dosage: '5mg' }
+    ]
+  },
+  {
+    disease: 'Ehlers-Danlos Syndrome',
+    medicines: [
+      { name: 'Tramadol', type: 'Tablet', dosage: '50mg' },
+      { name: 'Gabapentin', type: 'Capsule', dosage: '300mg' },
+      { name: 'Vitamin C', type: 'Tablet', dosage: '1000mg' }
+    ]
+  },
+  {
+    disease: 'Osteogenesis Imperfecta',
+    medicines: [
+      { name: 'Bisphosphonates', type: 'Injection', dosage: 'As prescribed' },
+      { name: 'Calcium supplements', type: 'Tablet', dosage: '1000mg' },
+      { name: 'Vitamin D', type: 'Tablet', dosage: '800IU' }
+    ]
+  },
+  {
+    disease: 'Hemophilia',
+    medicines: [
+      { name: 'Factor VIII concentrate', type: 'Injection', dosage: 'As needed' },
+      { name: 'Desmopressin', type: 'Injection', dosage: '0.3mcg/kg' },
+      { name: 'Tranexamic acid', type: 'Tablet', dosage: '1g' }
+    ]
+  },
+  {
+    disease: 'Von Willebrand Disease',
+    medicines: [
+      { name: 'Desmopressin', type: 'Injection', dosage: '0.3mcg/kg' },
+      { name: 'Factor VIII concentrate', type: 'Injection', dosage: 'As needed' },
+      { name: 'Tranexamic acid', type: 'Tablet', dosage: '1g' }
     ]
   }
 ];
